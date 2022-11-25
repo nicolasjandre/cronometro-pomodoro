@@ -15,10 +15,16 @@ export default function() {
     function bgAudioStart() {
         bgAudio.play()
     }
+
+    function bgAudioPause() {
+        bgAudio.pause()
+        bgAudio.currentTime = 0;
+    }
     
     return {
         playAndPauseAudio,
         timerEnd,
-        bgAudioStart
+        bgAudioStart,
+        bgAudioPause
     }
 }

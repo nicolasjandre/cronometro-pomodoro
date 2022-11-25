@@ -12,13 +12,14 @@ const stopButton = document.getElementById('stop-button')
 const minutes = document.getElementById('minutes')
 const seconds = document.getElementById('seconds')
 const unmuteButton = document.getElementById('unmute-button')
+const muteButton = document.getElementById('mute-button')
 
 timerButton.addEventListener('click', timerTime)
 playButton.addEventListener('click', startCountdown)
 pauseButton.addEventListener('click', pauseCountdown)
 stopButton.addEventListener('click', stopCountdown)
-unmuteButton.addEventListener('click', sound.bgAudioStart)
-
+unmuteButton.addEventListener('click', unmuteSound)
+muteButton.addEventListener('click', muteSound)
 
 function timerTime() {
     timerChoose = Number(prompt('Escolha o o tempo do temporizador (em minutos)'))
@@ -102,4 +103,17 @@ function stopCountdown() {
     actualSeconds = 0
     minutes.innerText = '00'
     seconds.innerText = '00'
+}
+
+function unmuteSound() {
+    sound.bgAudioStart()
+    unmuteButton.classList.toggle('hide')
+    muteButton.classList.toggle('hide')
+}
+
+function muteSound() {
+    sound.bgAudioPause()
+    
+    unmuteButton.classList.toggle('hide')
+    muteButton.classList.toggle('hide')
 }

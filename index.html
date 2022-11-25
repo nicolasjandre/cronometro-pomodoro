@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projeto pessoal de um temporizador com opções musicais.">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    
+    <script src="./scripts/main.js" defer type="module"></script>
+    
+    <title>Timer</title>
+</head>
+
+<body>
+    
+    <main>
+        
+        <div class="timer-wrapper">
+            <span id="minutes">25</span>
+            <span>:</span>
+            <span id="seconds">00</span>
+        </div>
+
+        <div class="buttons-wrapper">
+            <button id="play-button" type="button"><img src="./assets/playbutton.svg" alt="Botão para iniciar a contagem regressiva"></button>
+            <button class="hide" id="pause-button" type="button"><img src="./assets/pause.svg" alt="Botão para pausar o cronômetro"></button>
+            <button id="timer-button" type="button"><img src="./assets/timer.svg" alt="Botão para selecionar o tempo inicial do cronômetro"></button>
+            <button class="hide" id="stop-button" type="button"><img src="./assets/stop.svg" alt="Botão para parar o cronômetro"></button>
+        </div>
+
+        <div class="bottom-btn-wrapper">
+            <button id="unmute-button" type="button"><img src="./assets/soundon.svg" alt="Botão para ativar o som da música de fundo da página"></button>
+            <button class="hide" id="mute-button" type="button"><img src="./assets/mute.svg" alt="Botão para desativar o som da música de fundo da página"></button>
+        </div>
+   
+    </main>
+    
+
+</body>
+</html>

@@ -1,4 +1,4 @@
-export default function() {
+export default function(unmuteButton, muteButton) {
 
     const buttonPressAudio = new Audio("https://github.com/maykbrito/automatic-video-creator/blob/master/audios/button-press.wav?raw=true")
     const kitchenTimer = new Audio("https://github.com/maykbrito/automatic-video-creator/blob/master/audios/kichen-timer.mp3?raw=true")
@@ -20,11 +20,25 @@ export default function() {
         bgAudio.pause()
         bgAudio.currentTime = 0;
     }
+
+    function unmute() {
+        bgAudioStart()
+        unmuteButton.classList.toggle('hide')
+        muteButton.classList.toggle('hide')
+    }
+    
+    function mute() {
+        bgAudioPause()
+        unmuteButton.classList.toggle('hide')
+        muteButton.classList.toggle('hide')
+    }
     
     return {
         playAndPauseAudio,
         timerEnd,
         bgAudioStart,
-        bgAudioPause
+        bgAudioPause,
+        unmute,
+        mute
     }
 }

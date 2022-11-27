@@ -13,6 +13,7 @@ export default function(unmuteButton, muteButton) {
     }
 
     function bgAudioStart() {
+        bgAudio.loop=true
         bgAudio.play()
     }
 
